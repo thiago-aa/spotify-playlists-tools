@@ -18,7 +18,7 @@ export default  function Home() {
       client_id: process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID,
       grant_type: 'authorization_code',
       code: code.toString(),
-      redirect_uri: 'http://localhost:3000',
+      redirect_uri: 'https://spotify-playlists-tools.vercel.app/',
       code_verifier: codeVerifier.toString(),
     };
     
