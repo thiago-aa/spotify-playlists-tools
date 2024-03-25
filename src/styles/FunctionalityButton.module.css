@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12vw;
+  height: 12vw;
+  border: solid 1px #ededed10;
+  padding: 7px;
+  border-radius: 5px;
+  margin: 2vh;
+}
+
+.container:hover {
+  border: solid 2px #ededed10;
+}
+
+.container h4 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 0.8vh;
+}
+
+.container p {
+  font-size: 0.9rem;
+  word-wrap: break-word;
+  text-align: center;
+  color: #999;
+}

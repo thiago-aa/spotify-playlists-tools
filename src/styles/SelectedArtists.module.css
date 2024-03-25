@@ -1,0 +1,12 @@
+.selectedArtistsContainer {
+  height: 90%;
+  width: 50%;
+}
+
+.artistsList {
+  border: solid 1px #ededed10;
+  border-radius: 5px;
+  height: 95%;
+  padding: 20px;
+  overflow-y: auto;
+}

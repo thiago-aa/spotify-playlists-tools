@@ -1,0 +1,8 @@
+.artistsSelectionContainer > div {
+  border: solid 1px #ededed10;
+  border-radius: 5px;
+  padding: 1vw;
+  height: 60vh;
+  width: 40vw;
+  display: flex;
+}

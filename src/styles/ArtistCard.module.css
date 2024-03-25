@@ -1,0 +1,99 @@
+.artist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1vh;
+  background-color: #ededed;
+  width: 100%;
+  padding: 7px 4px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  height: 9vh;
+  word-wrap: break-word;
+}
+
+.artistHover {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1vh;
+  background-color: #ededed;
+  width: 100%;
+  padding: 7px 4px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  height: 9vh;
+}
+
+.artistInfo {
+  display: flex;
+  align-items: center;
+  background-color: #ededed;
+  width: 80%;
+  max-height: 90%;
+}
+
+.artistInfo p {
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  width: 70%;
+}
+
+.artistName {
+  background-color: transparent;
+  color: #222;
+  font-weight: 500;
+}
+
+.artistImg {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  margin-right: 1vw;
+}
+
+.artist button {
+  border: none;
+  background-color: #222;
+  padding: 2px;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  justify-self: right;
+}
+
+.artistHover button {
+  background-color: #ededed;
+  border: #222 solid 1px;
+  padding: 2px;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* justify-self: right; */
+}
+
+.arrowIcon {
+  background-color: transparent;
+  fill: #ededed;
+}
+
+.artistHover .arrowIcon {
+  fill: #222;
+}
+
+.deleteIcon {
+  background-color: transparent;
+  fill: hsl(7, 90%, 47%);
+  height: 20px;
+}
+

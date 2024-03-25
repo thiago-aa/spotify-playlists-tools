@@ -1,0 +1,56 @@
+.header {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  /* justify-content: center; */
+  height: 8vh;
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  width: 20vw;
+  background-color: #1DB954;
+  padding: 1vh;
+  box-sizing: border-box;
+}
+
+.header span {
+  margin-right: 2vw;
+}
+
+.triangleContainer {
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1vh;
+  border-radius: 100%;
+  height: 3vw;
+  width: 3vw;
+  margin-right: 1vw;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-top: 2vh solid transparent; /* Parte superior transparente */
+  border-bottom: 2vh solid transparent; /* Parte inferior transparente */
+  border-left: 4vh solid #ddd; /* Lado direito colorido (no exemplo, azul) */
+}
+
+.header h1 {
+  flex-grow: 1;
+  font-size: 1.4rem;
+  text-align: center;
+  padding-right: 20vw;
+}
+
+
+
+

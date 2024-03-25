@@ -1,0 +1,33 @@
+.container {
+  height: 85vh;
+}
+
+.playlistContainer {
+  border: solid 1px #ededed10;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh;
+  width: 53vw;
+  height: 95%;
+  overflow-y: auto;
+}
+
+.container button {
+  border: 1px #ededed solid;
+  width: 27%;
+  height: 4vh;
+  margin: 1vh 0 2vh 3%;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 5px;
+  background-color: #1DB954;
+  justify-self: flex-end;
+}
+.container label {
+  /* border: solid 1px red; */
+  width: 90%;
+}
+
+
