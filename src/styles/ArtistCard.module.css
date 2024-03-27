@@ -97,3 +97,12 @@
   height: 20px;
 }
 
+@media only screen and (max-width: 767px) {
+  .artist {
+    height: 6vh;
+  }
+
+  .artistHover {
+    height: 6vh;
+  }
+}

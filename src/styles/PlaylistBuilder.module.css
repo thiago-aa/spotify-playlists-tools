@@ -25,9 +25,48 @@
   background-color: #1DB954;
   justify-self: flex-end;
 }
+
 .container label {
-  /* border: solid 1px red; */
-  width: 90%;
+  width: 100%;
 }
 
+.inputContainer {
+  width: 100%;  
+}
 
+@media only screen and (max-width: 767px) {
+  .container label {
+    width: 90%;
+  }
+
+  .container {
+    width: 100%;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container h3 {
+    width: 90%;
+  }
+
+  .playlistContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 0;
+  }
+
+  .inputContainer {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5vh;
+  }
+
+  .container button { 
+    margin: 0 0 0 2vw;
+  }
+}

@@ -7,8 +7,6 @@ import PlaylistBuilder from '@/components/PlaylistBuilder';
 import { Router, useRouter } from 'next/router';
 import ArtistsSelection from '@/components/ArtistsSelection';
 
-
-
 export default function Home() {
   const [token, setToken] = useState<string>('');
   const [artistInput, setArtistInput] = useState<string>('');
@@ -36,7 +34,6 @@ export default function Home() {
   }, []);
   
   async function getToken() {
-    console.log('clientID:', clientID)
     try {
       const response = await axios.post('https://accounts.spotify.com/api/token', 
         new URLSearchParams({
@@ -97,11 +94,14 @@ export default function Home() {
     } else {
       userToken = Cookies.get('user_access_token');
     }
+
     const user = await axios.get(`https://api.spotify.com/v1/me`, {
       headers: {
         Authorization: `Bearer ${userToken}`
       },
     })
+
+      
     const playlist = await axios.post(`https://api.spotify.com/v1/users/${user.data.id}/playlists`, {
         name: playlistName ? playlistName : 'Top Tracks',
         description: '',
@@ -127,12 +127,10 @@ export default function Home() {
       router.push('/');
     }
     if(!savePlaylist) {
-      console.log('entrou no if do savedPlaylist');
-      console.log('playlist id:', playlistID);
       try {
         await axios.delete(`https://api.spotify.com/v1/playlists/${playlistID}`, {
           headers: {
-            'Authorization': `Bearer ${userToken}`
+            'Authorization': `Bearer ${token}`
           }
         });
       } catch (error) {

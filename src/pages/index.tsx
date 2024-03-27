@@ -18,7 +18,7 @@ export default  function Home() {
       client_id: process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID,
       grant_type: 'authorization_code',
       code: code.toString(),
-      redirect_uri: 'https://spotify-playlists-tools.vercel.app/',
+      redirect_uri: 'http://localhost:3000/',
       code_verifier: codeVerifier.toString(),
     };
     
@@ -65,7 +65,7 @@ export default  function Home() {
             </FunctionalityButton>
           </div>
           ) : (
-          <div className={styles.grantAccessContainer}>
+          <div>
             <p>Please grant access to your Spotify profile for full site functionality.</p>
             <button className={styles.loginButton}><a href="/login">Grant Access</a></button>
           </div>

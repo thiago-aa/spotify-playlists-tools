@@ -17,20 +17,28 @@ export default function Input(props: InputProps) {
       {
         label ? (
           <>
-            <label htmlFor={id}>{label}</label>
-            <br />
-          
+            <label htmlFor={id}>{label}
+            <input 
+              id={id} 
+              className={styles.input} 
+              style={style} type="text" 
+              autoComplete='off' 
+              value={inputValue} 
+              onChange={(e) => handleChange(e.target.value)}
+            />
+            </label>
           </>
-        ) : null
+        ) : (
+          <input 
+              id={id} 
+              className={styles.input} 
+              style={style} type="text" 
+              autoComplete='off' 
+              value={inputValue} 
+              onChange={(e) => handleChange(e.target.value)}
+            />
+        )
       }
-      <input 
-        id={id} 
-        className={styles.input} 
-        style={style} type="text" 
-        autoComplete='off' 
-        value={inputValue} 
-        onChange={(e) => handleChange(e.target.value)}
-      />
     </>
   )
 }

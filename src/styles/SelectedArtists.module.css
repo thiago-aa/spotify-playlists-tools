@@ -10,3 +10,11 @@
   padding: 20px;
   overflow-y: auto;
 }
+
+@media only screen and (max-width: 767px) {
+  .selectedArtistsContainer {
+    width: 90%;
+    height: 30vh;
+    margin-top: 3vh;
+  }
+}

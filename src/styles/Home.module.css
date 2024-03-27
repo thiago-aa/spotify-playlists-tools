@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;  
+  text-align: center;
 }
 
 .container a {
@@ -31,7 +32,7 @@
   cursor: pointer;
 }
 
-.grantAccessContainer {
+.container > div {
   margin-top: 5vh;
   display: flex;
   flex-direction: column;

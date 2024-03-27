@@ -6,3 +6,18 @@
   width: 40vw;
   display: flex;
 }
+
+@media only screen and (max-width: 767px) {
+  .artistsSelectionContainer > div {
+    width: 90vw;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    padding: 2vh;
+  }
+
+  .artistsSelectionContainer > div h3 {
+    font-size: 1.1rem;
+    /* color: red; */
+  }
+}

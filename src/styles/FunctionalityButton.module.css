@@ -26,3 +26,10 @@
   text-align: center;
   color: #999;
 }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 80vw;
+    height: 10vh;
+  }
+}

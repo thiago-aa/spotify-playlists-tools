@@ -15,8 +15,9 @@ export default function PlaylistBuilder(props: PlaylistBuilderProps) {
     <div className={styles.container}>
       <h3>Playlist Builder</h3>
       <div className={styles.playlistContainer}>
-        <div style={{width: '100%'}}>
-          <Input handleChange={handleInput} inputValue={playlistName} label='Playlist Name' style={{width: '70%'}}/>
+        <label htmlFor="">Playlist Name</label>
+        <div className={styles.inputContainer}>
+          <Input handleChange={handleInput} inputValue={playlistName} style={{width: '70%', marginTop: '0'}}/>
           <button onClick={generatePlaylist}>Generate Playlist</button>
         </div>        
           {
