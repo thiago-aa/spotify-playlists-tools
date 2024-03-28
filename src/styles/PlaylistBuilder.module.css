@@ -14,7 +14,7 @@
   overflow-y: auto;
 }
 
-.container button {
+.activeButton {
   border: 1px #ededed solid;
   width: 27%;
   height: 4vh;
@@ -32,6 +32,13 @@
 
 .inputContainer {
   width: 100%;  
+}
+
+.disabledButton {
+  color: #9d9d9d;
+  background-color: hsl(141, 13%,30%);
+  cursor: not-allowed;
+  border: solid 1px hsl(141, 13%, 35%)
 }
 
 @media only screen and (max-width: 767px) {

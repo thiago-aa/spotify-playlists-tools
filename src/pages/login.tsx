@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import querystring from 'querystring';
 
 const client_id = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID;
-const redirect_uri = 'https://spotify-playlists-tools.vercel.app/';
+const redirect_uri = process.env.NEXT_PUBLIC_CALLBACK_URL;
 
 const generateRandomString = (length: number) => {
   let text = '';

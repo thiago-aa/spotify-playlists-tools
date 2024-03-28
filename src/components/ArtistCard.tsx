@@ -1,5 +1,5 @@
 import styles from '../styles/ArtistCard.module.css'
-import { IconArrowRight, DeleteIcon } from './icons';
+import { IconArrowRight, DeleteIcon, IconPlus } from './icons';
 import { useState } from 'react';
 
 interface ArtistSearchedProps {
@@ -18,7 +18,7 @@ export default function ArtistCard(props: ArtistSearchedProps) {
       className={cardStyle} 
       onMouseOver={() => type === 'searchResult' && setCardStyle(styles.artistHover)}
       onMouseLeave={() => setCardStyle(styles.artist)}
-      onClick={() => type ==='searchResult' && handleClick([...artistsList, artist])}
+      onClick={() => type ==='searchResult' && handleClick(artist)}
     >
       <div className={styles.artistInfo}>        
         <img className={styles.artistImg} src={artist.images[0] !== undefined ? artist.images[0].url : ''} alt={`${artist.name} image not found`} />
@@ -28,7 +28,7 @@ export default function ArtistCard(props: ArtistSearchedProps) {
       </div>
       {
         type === 'searchResult' ? (
-          <button><IconArrowRight className={styles.arrowIcon}/></button>
+          <button>+</button>
         ) : (
           <button style={{backgroundColor: '#ededed'}} onClick={() => handleClick(artist)}><DeleteIcon className={styles.deleteIcon}/></button>
         )

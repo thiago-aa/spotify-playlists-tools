@@ -13,17 +13,22 @@ interface SearchArtistProps {
 export default function SearchArtist(props: SearchArtistProps) {
   const {artistInput, handleSearchInput, searchedArtists, selectedArtists, setSelectedArtists} = props
 
+  const selectArtist = (artist: any) => {
+    if(!selectedArtists.includes(artist)){
+      setSelectedArtists([artist, ...selectedArtists])
+    }
+  }
+
   return (
     <div className={styles.searchArtistContainer}>
       <h3>Search for the artists</h3>
-      {/* <label htmlFor="artistInput">Type the artist name</label><br /> */}
       <Input handleChange={handleSearchInput} inputValue={artistInput}></Input>
       <div className={styles.artistsList}>
         {
         artistInput.length > 0 ? (
           searchedArtists.map((artist, i) =>  (
             <ArtistCard 
-              handleClick={setSelectedArtists} 
+              handleClick={selectArtist} 
               artist={artist} 
               artistsList={selectedArtists} 
               type='searchResult'

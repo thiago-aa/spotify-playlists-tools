@@ -16,6 +16,7 @@ export default function Home() {
   const [playlistID, setPlaylistID] = useState<string>('')
   const [code, setCode] = useState('')
   const [playlistName, setPlaylistName] = useState('');
+  const [noPlaylist, setNoPlaylist] = useState(null);
   const [logged, setLogged] = useState(true);
   const [savePlaylist, setSavePlaylist] = useState(true);
   const clientID: any = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID;
@@ -83,6 +84,13 @@ export default function Home() {
 
   const generateTopTracksPlaylist = async () => {
     const auxTracks: any[] = [];
+
+    setNoPlaylist(
+      <>
+        Loading...
+      </>
+    );
+
     for (const artist of selectedArtists) {
       const artistTracks = await getTopTracks(artist.id);
       auxTracks.push(...artistTracks.map((track: any) => track.uri))
@@ -153,12 +161,18 @@ export default function Home() {
             selectedArtists={selectedArtists}
             setSelectedArtists={setSelectedArtists}
           />
+        <div>
+        </ div>
+
           <PlaylistBuilder 
             generatePlaylist={generateTopTracksPlaylist} 
             playlistID={playlistID} 
             handleInput={setPlaylistName} 
             playlistName={playlistName}
+            activeButton={selectedArtists.length > 0}
+            noPlaylist={noPlaylist}
           />
+          
         </div>
       </>
     )
