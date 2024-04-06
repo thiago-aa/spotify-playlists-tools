@@ -121,9 +121,8 @@ export default function Home() {
         }
       }
     )
-    setPlaylistID(playlist.data.id);
     try {
-      const addAsMusicas = await axios.post(`https://api.spotify.com/v1/playlists/${playlist.data.id}/tracks`, {
+      await axios.post(`https://api.spotify.com/v1/playlists/${playlist.data.id}/tracks`, {
       uris: auxTracks
       }, {
        headers: {
@@ -131,6 +130,7 @@ export default function Home() {
           'Content-Type': 'application/json'
         }
       })
+    setPlaylistID(playlist.data.id);
     } catch(error) {
       router.push('/');
     }
@@ -144,7 +144,6 @@ export default function Home() {
       } catch (error) {
         console.error('Error unfollowing playlist:', error);
       }
-      
     }
   }
 
